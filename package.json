@@ -1,0 +1,25 @@
+{
+  "name": "perelviewserver",
+  "version": "1.0.0",
+  "description": "Server to handle perelView site requests",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrinOleksandr/perelViewServer.git"
+  },
+  "author": "Oleksandr Grin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrinOleksandr/perelViewServer/issues"
+  },
+  "homepage": "https://github.com/GrinOleksandr/perelViewServer#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-formidable": "^1.2.0",
+    "nodejs": "0.0.0"
+  }
+}
