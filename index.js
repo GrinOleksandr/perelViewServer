@@ -8,7 +8,7 @@ const moment = require('moment-timezone');
 
 
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     let data = moment().tz("Israel/Jerusalem").format();
     res.end("OK");
 });
