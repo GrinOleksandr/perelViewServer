@@ -4,7 +4,6 @@ const app = express();
 const http = require('http').Server(app);
 const port =  process.env.PORT || 12345;
 const formidableMiddleware = require('express-formidable');
-const moment = require('moment-timezone');
 const date = require('date-and-time');
 app.get('/', (req, res) => {
     res.end("This is Oleksandr's server! ;)");
