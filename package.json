@@ -21,7 +21,6 @@
     "date-and-time": "^0.6.3",
     "express": "^4.16.4",
     "express-formidable": "^1.2.0",
-    "moment-timezone": "^0.5.23",
     "nodejs": "0.0.0",
     "nodemon": "^1.18.10"
   }
