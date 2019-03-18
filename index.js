@@ -25,6 +25,11 @@ app.get('/time', (req, res) => {
         minutes: date.format(now, 'mm [GMT]+2'),
         seconds: date.format(now, 'ss [GMT]+2')
     };
+    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Origin');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.writeHead(200);
+
     res.end(JSON.stringify(data));
 });
 
