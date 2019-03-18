@@ -6,21 +6,21 @@ const port =  process.env.PORT || 12345;
 const formidableMiddleware = require('express-formidable');
 const moment = require('moment-timezone');
 
-
-
 app.get('/', (req, res) => {
-    let data = moment().tz("Israel/Jerusalem").format();
-    res.end("OK");
+    res.end("This is Oleksandr's server! ;)");
 });
 
+//Handling time requests
+moment.tz.add('Asia/Jerusalem|LMT JMT IST IDT IDDT|-2k.S -2k.E -20 -30 -40|');
+
 app.get('/time', (req, res) => {
-    let data = moment().tz("Israel/Jerusalem").format();
+    let data = moment().tz("Asia/Jerusalem").format();
     res.end(data);
 });
 
 
 http.listen(port, function () {
-    console.log(moment().tz("Israel/Jerusalem").format());
+    console.log(moment().tz("Asia/Jerusalem|Israel").format());
     console.log(`***Server running at localhost:${port}`);
 });
 
