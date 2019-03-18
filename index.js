@@ -11,10 +11,12 @@ app.get('/', (req, res) => {
 });
 
 //Handling time requests
-moment.tz.add('Asia/Jerusalem|LMT JMT IST IDT IDDT|-2k.S -2k.E -20 -30 -40|');
 
-let now = new Date();
+
+
 app.get('/time', (req, res) => {
+    console.log('time request recieved');
+    let now = new Date();
     let data = {
         timezone: "Israel([GMT]+2)",
         year: date.format(now, 'YYYY [GMT]+2'),
