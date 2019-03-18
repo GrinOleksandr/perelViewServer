@@ -15,8 +15,16 @@ moment.tz.add('Asia/Jerusalem|LMT JMT IST IDT IDDT|-2k.S -2k.E -20 -30 -40|');
 
 let now = new Date();
 app.get('/time', (req, res) => {
-    let data = date.format(now, 'HH:mm [GMT]+2');
-    res.end(data);
+    let data = {
+        timezone: "Israel([GMT]+2)",
+        year: date.format(now, 'YYYY [GMT]+2'),
+        month: date.format(now, 'MM [GMT]+2'),
+        date: date.format(now, 'DD [GMT]+2'),
+        hours: date.format(now, 'HH [GMT]+2'),
+        minutes: date.format(now, 'mm [GMT]+2'),
+        seconds: date.format(now, 'ss [GMT]+2')
+    };
+    res.end(JSON.stringify(data));
 });
 
 
