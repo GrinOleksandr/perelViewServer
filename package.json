@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/GrinOleksandr/perelViewServer#readme",
   "dependencies": {
+    "date-and-time": "^0.6.3",
     "express": "^4.16.4",
     "express-formidable": "^1.2.0",
     "moment-timezone": "^0.5.23",

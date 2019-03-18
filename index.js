@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 moment.tz.add('Asia/Jerusalem|LMT JMT IST IDT IDDT|-2k.S -2k.E -20 -30 -40|');
 
 app.get('/time', (req, res) => {
-    let data = moment().tz("Asia/Jerusalem").format();
+    let data = moment.tz('Asia/Jerusalem').format('YYYY-MM-DD HH:mm:ss');
     res.end(data);
 });
 
