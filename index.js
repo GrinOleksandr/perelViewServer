@@ -30,7 +30,6 @@ app.get('/time', (req, res) => {
 
 
 http.listen(port, function () {
-    console.log(moment().tz("Asia/Jerusalem|Israel").format());
     console.log(`***Server running at localhost:${port}`);
 });
 
