@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "inspect" : "nodemon --inspect index.js"
+    "inspect": "nodemon --inspect index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/GrinOleksandr/perelViewServer#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "date-and-time": "^0.6.3",
     "express": "^4.16.4",
     "express-formidable": "^1.2.0",

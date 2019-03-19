@@ -5,6 +5,7 @@ const http = require('http').Server(app);
 const port =  process.env.PORT || 12345;
 const formidableMiddleware = require('express-formidable');
 const date = require('date-and-time');
+const cors = require('cors');
 app.get('/', (req, res) => {
     res.end("This is Oleksandr's server! ;)");
 });
@@ -13,7 +14,7 @@ app.get('/', (req, res) => {
 
 
 
-app.get('/time', (req, res) => {
+app.get('/time', cors(),  (req, res) => {
     console.log('time request recieved');
     let now = new Date();
     let data = {
@@ -25,7 +26,7 @@ app.get('/time', (req, res) => {
         minutes: date.format(now, 'mm [GMT]+2'),
         seconds: date.format(now, 'ss [GMT]+2')
     };
-    res.setHeader('Content-Type', 'application/JSON');
+    res.setHeader('Content-Type', 'application/json');
     res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Origin');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.writeHead(200);
