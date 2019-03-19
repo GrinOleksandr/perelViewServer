@@ -20,7 +20,8 @@ app.get('/time', cors(),  (req, res) => {
     console.log('time request recieved');
     let now = new Date();
     let data = {
-        timezone: "Israel([GMT]+2)",
+        Location: "Israel-Jerusalem",
+        timezone: "[GMT]+2",
         year: date.format(now, 'YYYY [GMT]+2'),
         month: date.format(now, 'MM [GMT]+2'),
         date: date.format(now, 'DD [GMT]+2'),
