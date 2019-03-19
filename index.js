@@ -6,6 +6,8 @@ const port =  process.env.PORT || 12345;
 const formidableMiddleware = require('express-formidable');
 const date = require('date-and-time');
 const cors = require('cors');
+
+
 app.get('/', (req, res) => {
     res.end("This is Oleksandr's server! ;)");
 });
@@ -13,7 +15,7 @@ app.get('/', (req, res) => {
 //Handling time requests
 
 
-
+app.options('/time', cors());
 app.get('/time', cors(),  (req, res) => {
     console.log('time request recieved');
     let now = new Date();
