@@ -24,7 +24,7 @@ app.get('/time', cors(),  (req, res) => {
         month: date.format(now, 'MM [GMT]+2'),
         date: date.format(now, 'DD [GMT]+2'),
         day: date.format(now, 'dddd [GMT]+2'),
-        hours: date.format(now, 'HH [GMT]+7',true),
+        hours: date.format(now, 'HH [GMT]+7'),
         minutes: date.format(now, 'mm [GMT]+2'),
         seconds: date.format(now, 'ss [GMT]+2')
     };
