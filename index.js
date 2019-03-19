@@ -27,8 +27,8 @@ app.get('/isclosed', cors(),  (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.writeHead(200);
 
-    if(((day === "Friday") && (8 >= +hour >= 12)
-        || (hour >= 8 >= 17))){
+    if(((day === "Friday") && (8 >= +hour >= 12))
+        || (hour >= 8 >= 17)){
         res.end("true")
     }
 
