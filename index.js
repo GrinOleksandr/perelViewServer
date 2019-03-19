@@ -18,7 +18,7 @@ app.options('/isclosed', cors());
 app.get('/isclosed', cors(),  (req, res) => {
     console.log('time request recieved');
 
-    let israelTime = moment().utcOffset('+02:00').format('dddd h');
+    let israelTime = moment().utcOffset('+02:00').format('dddd H');
     let timeData = israelTime.split(' ');
     let day= timeData[0];
     let hour=timeData[1];
