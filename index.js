@@ -26,12 +26,12 @@ app.get('/isclosed', cors(),  (req, res) => {
     res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Origin');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.writeHead(200);
+    console.log(day, hour);
 
     if(((day === "Friday") && (8 >= +hour >= 12))
-        || (hour >= 8 >= 17)){
+        || ( 8>= +hour >= 17)){
         res.end("true")
     }
-
     else res.end("false")
 
 });
