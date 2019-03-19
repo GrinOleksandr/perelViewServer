@@ -20,13 +20,14 @@ app.get('/time', cors(),  (req, res) => {
     let data = {
         location: "Israel-Jerusalem",
         timezone: "[GMT]+2",
-        year: date.format(now, 'YYYY [GMT]+2'),
-        month: date.format(now, 'MM [GMT]+2'),
-        date: date.format(now, 'DD [GMT]+2'),
-        day: date.format(now, 'dddd [GMT]+2'),
-        hours: date.format(now, 'HH [GMT]+7'),
-        minutes: date.format(now, 'mm [GMT]+2'),
-        seconds: date.format(now, 'ss [GMT]+2')
+        time: date.format(now, 'YYYY:MM:DD:dddd:HH:mm:ss [GMT]+5')
+        // year: date.format(now, 'YYYY [GMT]+2'),
+        // month: date.format(now, 'MM [GMT]+2'),
+        // date: date.format(now, 'DD [GMT]+2'),
+        // day: date.format(now, 'dddd [GMT]+2'),
+        // hours: date.format(now, 'HH [GMT]+7'),
+        // minutes: date.format(now, 'mm [GMT]+2'),
+        // seconds: date.format(now, 'ss [GMT]+2')
     };
     res.setHeader('Content-Type', 'application/json');
     res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Origin');
