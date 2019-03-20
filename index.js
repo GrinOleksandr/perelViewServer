@@ -16,7 +16,6 @@ app.get('/', (req, res) => {
 
 app.options('/isclosed', cors());
 app.get('/isclosed', cors(),  (req, res) => {
-    console.log('time request recieved');
 
     let israelTime = moment().utcOffset('+02:00').format('dddd HH');
     let timeData = israelTime.split(' ');
@@ -26,7 +25,6 @@ app.get('/isclosed', cors(),  (req, res) => {
     res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Origin');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.writeHead(200);
-    console.log(day, hour);
 
     if((day === "Saturday") || (day === "Friday" && (8 >= +hour || +hour >= 12)) || ( 8>= +hour || +hour >= 17)){
         res.end("true")
