@@ -28,11 +28,10 @@ app.get('/isclosed', cors(),  (req, res) => {
     res.writeHead(200);
     console.log(day, hour);
 
-    if(((day === "Friday") && (8 >= +hour >= 12))
-        || ( 8>= +hour >= 17)){
-        res.end("true")
+    if((day === "Friday" && (8 >= +hour || +hour >= 12)) || ( 8>= +hour || +hour >= 9)){
+        res.end(true)
     }
-    else res.end("false")
+    else res.end(false)
 
 });
 
