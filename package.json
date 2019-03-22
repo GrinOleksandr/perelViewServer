@@ -20,9 +20,7 @@
   "homepage": "https://github.com/GrinOleksandr/perelViewServer#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "date-and-time": "^0.6.3",
     "express": "^4.16.4",
-    "express-formidable": "^1.2.0",
     "moment": "^2.24.0",
     "nodejs": "0.0.0",
     "nodemon": "^1.18.10"
